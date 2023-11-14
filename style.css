@@ -78,17 +78,65 @@ label {
 }
 
 input {
-    /* border: 1px solid #ccc; */
     border-radius: 5px;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */ /*gap between message box and search box*/
 }
 
 input[type="text"] {
     height: 2.25rem;
     background: url(./img/static/icons8-search-48.png) 0.75rem center no-repeat;
-    background-size: 2rem;
+    background-size: 1.85rem;
     background-color: rgb(20,38,61);
     color: antiquewhite;
-    padding-left: 4.25rem;
-    
+    padding-left: 3.25rem;
+    outline: none;
+    transition: all 1s ease-in-out;
+    flex-grow: 1; /* is it a good styling? */
+}
+
+input:focus, input:hover {
+    background-color: rgb(15,27,45);
+}
+
+input::placeholder {
+    color: rgb(65, 83, 106);
+}
+
+.form-row {
+    display: flex;
+    gap: .5rem;
+}
+
+form button {
+    height: 2.25rem;
+    width: 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+form button:hover {
+    /* transform: scale(1.1);
+    transition: all 1s ease-in-out; */
+    transition: transform 1.5s;
+    transform: rotate(360deg);
+}
+
+.form-msg {
+    background-color: rgb(20,38,61);
+    padding: .5rem 1rem;
+    border-radius: 0 0 5px 5px;
+    margin-left: .75rem;
+    width: 75%;
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+    z-index: -1;
+    position: relative;
+    transition: all 0.1s ease;
+}
+
+.form-msg.visible {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
 }
