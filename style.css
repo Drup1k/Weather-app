@@ -1,0 +1,63 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    /* font-family: to be determine ; */
+    background-color: rgb(48, 65, 117);
+    color: white;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.container {
+    padding: 4rem 2rem;
+}
+
+/* Paragraph + links */
+
+p {
+    margin:  0 0 1.5rem;
+}
+
+h1 {
+    font-size: 2.375rem;
+    line-height: 1.25;
+    margin: 0 0 1.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1.15;
+    margin: 0 0 .5rem;
+}
+
+h3 {
+    font-size: 1rem;
+    line-height: 1.25;
+    margin: 0;
+}
+
+small, .form-msg, .city__country {
+        font-size: 0.875rem;
+        line-height: 1.25;
+    
+}
+
+a {
+    color: red;
+    text-decoration: none;
+    /* transition: to be determine; */
+}
+
+a:hover {
+    color: aqua;
+}
