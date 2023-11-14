@@ -4,7 +4,7 @@ html {
 
 body {
     /* font-family: to be determine ; */
-    background-color: rgb(48, 65, 117);
+    background-color: rgb(28,54,89);
     color: white;
 }
 
@@ -60,4 +60,35 @@ a {
 
 a:hover {
     color: aqua;
+}
+
+/* Lists */
+
+/* Forms */
+
+form {
+    width: 100%;
+    margin-bottom: 2rem;
+    max-width: 30rem;
+}
+
+label {
+    margin-bottom: .5rem;
+    display: block;
+}
+
+input {
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+input[type="text"] {
+    height: 2.25rem;
+    background: url(./img/static/icons8-search-48.png) 0.75rem center no-repeat;
+    background-size: 2rem;
+    background-color: rgb(20,38,61);
+    color: antiquewhite;
+    padding-left: 4.25rem;
+    
 }
