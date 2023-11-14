@@ -5,7 +5,7 @@ html {
 body {
     /* font-family: to be determine ; */
     background-color: rgb(28,54,89);
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 figure {
@@ -13,9 +13,9 @@ figure {
     padding: 0;
 }
 
-img {
-    height: auto;
+.img-condition {
     max-width: 100%;
+    height: 10rem;
 }
 
 .container {
@@ -25,19 +25,21 @@ img {
 /* Paragraph + links */
 
 p {
-    margin:  0 0 1.5rem;
+    margin:  0 0 .5rem;
 }
 
 h1 {
     font-size: 2.375rem;
     line-height: 1.25;
     margin: 0 0 1.5rem;
+    color: white;
 }
 
 h2 {
     font-size: 1.75rem;
     line-height: 1.15;
     margin: 0 0 .5rem;
+    text-align: center;
 }
 
 h3 {
@@ -139,4 +141,57 @@ form button:hover {
 .form-msg.visible {
     transform: translate3d(0, 0, 0);
     opacity: 1;
+}
+
+/* cities grid */
+
+.cities {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-auto-rows: 15rem;
+    grid-gap: 1rem; */
+    padding: 0;
+    list-style: none;
+    gap: 5rem;
+    margin: 0 0 4rem;
+
+}
+
+.cities li {
+    display: flex;
+    /* try out displaying cards */
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(254,254,254);
+    padding: .5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+.city-conditions {
+    color: rgb(148, 151, 158);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.city-country {
+    color: rgb(254,254,254);
+    background-color: rgb(245, 163, 3);
+    border-radius: 5px;
+    padding: .1rem .25rem;
+}
+
+@media screen and (min-width: 560px) {
+    .cities {
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
+    .cities li {
+        flex-direction: column;
+        text-align: center;
+    }
+    .city-conditions {
+        margin-bottom: 1rem;
+    }
 }
